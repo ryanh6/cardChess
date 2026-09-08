@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bhyw5pjf1sqju"]
+
+[ext_resource type="PackedScene" uid="uid://cnhq8y3lh5582" path="res://scenes/gameBoard.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://bp0sqp075juu5" path="res://scenes/gameBoard.gd" id="2_0wfyh"]
+
+[node name="main" type="Node" unique_id=623304676]
+
+[node name="GameBoard" parent="." unique_id=1126988714 instance=ExtResource("1_o5qli")]
+position = Vector2(575, 325)
+scale = Vector2(0.64, 0.64)
+script = ExtResource("2_0wfyh")

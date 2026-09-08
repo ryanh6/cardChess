@@ -1,0 +1,17 @@
+- King Icon
+- 2 Players
+- Table Background
+- Game Board
+
+- Solider / Pawn Icon (For Base Pieces)
+- Rook Icon
+- Bishop Icon
+- Human Knight / Gladiator Icon
+- Knight / Horse Icon
+- Jester Icon (Jumper)
+
+- Card Front
+- Card Back
+- Card Outline
+
+- 3D Statue Bust

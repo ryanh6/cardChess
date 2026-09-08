@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cnhq8y3lh5582"]
+
+[ext_resource type="Texture2D" uid="uid://c53xjiwjqx38c" path="res://assets/gameBoard.png" id="1_irmpp"]
+
+[node name="GameBoard" type="Sprite2D" unique_id=1126988714]
+texture = ExtResource("1_irmpp")
