@@ -9,7 +9,6 @@ const WHITEPIECE = preload("res://assets/whitePiece.png")
 var board: Array
 
 func _ready() -> void:
-	print("hi")
 	createBoard()
 	
 func createBoard() -> void:
