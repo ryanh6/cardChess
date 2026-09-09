@@ -61,14 +61,10 @@ func displayBoard() -> void:
 		else:
 			card.texture = JUMPERCARD
 			
-	var player1 = PLAYER.instantiate()
-	add_child(player1)
-	player1.scale = Vector2(0.4, 0.4)
-	player1.global_position = Vector2(200, 200)
-	player1.texture = OXPLAYERICON
-	
-	var player2 = PLAYER.instantiate()
-	add_child(player2)
-	player2.scale = Vector2(0.4, 0.4)
-	player2.global_position = Vector2(900, 500)
-	player2.texture = WOLFPLAYERICON
+	#var player1 = PLAYER.instantiate()
+	#add_child(player1)
+	#player1.playerProperties(Vector2(200, 200), 0.4, OXPLAYERICON)
+	#
+	#var player2 = PLAYER.instantiate()
+	#add_child(player2)
+	#player2.playerProperties(Vector2(900, 500), 0.4, WOLFPLAYERICON)
