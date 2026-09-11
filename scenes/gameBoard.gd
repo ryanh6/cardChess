@@ -22,6 +22,9 @@ var board: Array
 func _ready() -> void:
 	createBoard()
 	
+#func _input(event):
+	#return
+	
 func createBoard() -> void:
 	board.append([1, 1, 1, 1, 1])
 	board.append([0, 0, 0, 0, 0])
@@ -61,10 +64,22 @@ func displayBoard() -> void:
 		else:
 			card.texture = JUMPERCARD
 			
-	#var player1 = PLAYER.instantiate()
-	#add_child(player1)
-	#player1.playerProperties(Vector2(200, 200), 0.4, OXPLAYERICON)
+	var player1 = PLAYER.instantiate()
+	add_child(player1)
+	player1.playerProperties(Vector2(200, 200), 0.4, OXPLAYERICON)
+	
+	var player2 = PLAYER.instantiate()
+	add_child(player2)
+	player2.playerProperties(Vector2(900, 500), 0.4, WOLFPLAYERICON)
+
+#func isMouseOut():
+	#return
+#
+#func isValidPosition(currentPosition: Vector2):
+	#return
 	#
-	#var player2 = PLAYER.instantiate()
-	#add_child(player2)
-	#player2.playerProperties(Vector2(900, 500), 0.4, WOLFPLAYERICON)
+#func isEmpty(currentPosition: Vector2):
+	#return
+	#
+#func isEnemy(currentPosition: Vector2):
+	#return
