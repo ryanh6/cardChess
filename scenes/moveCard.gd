@@ -27,6 +27,6 @@ func getDirections():
 		type.ATTACKER:
 			directions = [Vector2(0, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(0, 2)];
 		type.JUMPER:
-			print("jumper");
+			directions = [Vector2(2, 0), Vector2(-2, 2), Vector2(0, 2), Vector2(2, 2), Vector2(-2, 0), Vector2(2, -2), Vector2(0, -2), Vector2(-2, -2)];
 			
 	return directions;
