@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://bbejm85revru0"]
 
+[ext_resource type="Script" uid="uid://dwqkvuxkrnj7u" path="res://scenes/moveCard.gd" id="1_qx3d1"]
+
 [node name="Sprite2D" type="Sprite2D" unique_id=16942307]
+script = ExtResource("1_qx3d1")

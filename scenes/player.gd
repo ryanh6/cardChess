@@ -1,6 +1,8 @@
 extends Sprite2D
+class_name Player
 
-func playerProperties(newPosition: Vector2, newScale: float, newTexture: Texture2D) -> void:
-	global_position = newPosition
-	scale = Vector2(newScale, newScale)
-	texture = newTexture
+var id: int;
+var currentCards: Array[Card] = []
+
+func _init(newID: int):
+	id = newID;
