@@ -1,5 +1,8 @@
 extends Sprite2D
 
+func reset():
+	print("rest")
+
 func getMoves():
 	print("hi")
 	
