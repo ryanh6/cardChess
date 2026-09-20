@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cryncmll8o11i"]
 
-[ext_resource type="Script" uid="uid://27qi2sivsun7" path="res://scripts/gamePiece.gd" id="1_kjocy"]
+[ext_resource type="Script" uid="uid://27qi2sivsun7" path="res://scripts/logic/gamePiece.gd" id="1_kjocy"]
 
 [node name="Sprite2D" type="Sprite2D" unique_id=399467981]
 script = ExtResource("1_kjocy")

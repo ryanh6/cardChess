@@ -17,3 +17,14 @@ func startRound():
 	for player in playerList:
 		player.currentCards.clear()
 		
+func draftPhase():
+	print("hi")
+	
+func moveCard():
+	print("card")
+	
+func checkThrone():
+	print("check")
+	
+func finishRound():
+	print("hi")

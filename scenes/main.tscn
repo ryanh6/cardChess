@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bhyw5pjf1sqju"]
 
 [ext_resource type="PackedScene" uid="uid://cnhq8y3lh5582" path="res://scenes/gameBoard.tscn" id="1_o5qli"]
-[ext_resource type="Script" uid="uid://d1d8y1v8uqhjw" path="res://scripts/main.gd" id="1_sugp2"]
-[ext_resource type="Script" uid="uid://bp0sqp075juu5" path="res://scripts/gameBoard.gd" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://d1d8y1v8uqhjw" path="res://scripts/logic/main.gd" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://bp0sqp075juu5" path="res://scripts/logic/gameBoard.gd" id="2_0wfyh"]
 
 [node name="main" type="Node" unique_id=623304676]
 script = ExtResource("1_sugp2")
