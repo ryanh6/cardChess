@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bg4xknc347wko"]
 
-[node name="draftScreen" type="Control" unique_id=1902149979]
+[node name="DraftScreen" type="Control" unique_id=1902149979]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -8,12 +8,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1477838075]
+[node name="TransparantBackground" type="ColorRect" parent="." unique_id=1477838075]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1976559525]
+[node name="Center" type="CenterContainer" parent="." unique_id=1976559525]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0

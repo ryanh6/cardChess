@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cvblemk8pxgoy"]
+
+[ext_resource type="Texture2D" uid="uid://cv4yccfp3mg43" path="res://assets/gameBoard.png" id="1_irmpp"]
+
+[node name="GameBoard" type="Control" unique_id=1255382976]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=97364680]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.781
+anchor_bottom = 1.389
+offset_right = -959.68005
+offset_bottom = -960.08
+texture = ExtResource("1_irmpp")

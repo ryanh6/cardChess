@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://h6cv5xcntkfq"]
+
+[ext_resource type="Texture2D" uid="uid://hee0k37fc40w" path="res://assets/gameBackground.png" id="1_x5edd"]
+[ext_resource type="PackedScene" uid="uid://cvblemk8pxgoy" path="res://scenes/components/gameBoard.tscn" id="2_wdglq"]
+
+[node name="GameScreen" type="Control" unique_id=14647702]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1737016141]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_x5edd")
+expand_mode = 1
+
+[node name="MainMargin" type="MarginContainer" parent="." unique_id=1442477704]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="MainRows" type="VBoxContainer" parent="MainMargin" unique_id=629983092]
+layout_mode = 2
+
+[node name="BoardRow" type="CenterContainer" parent="MainMargin/MainRows" unique_id=1007131083]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GameBoard" parent="MainMargin/MainRows/BoardRow" unique_id=1255382976 instance=ExtResource("2_wdglq")]
+custom_maximum_size = Vector2(0, 0)
+layout_mode = 2
+
+[node name="PlayerUIRow" type="HBoxContainer" parent="MainMargin/MainRows" unique_id=202592522]
+layout_mode = 2
