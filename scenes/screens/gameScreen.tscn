@@ -34,23 +34,30 @@ theme_override_constants/margin_bottom = 25
 [node name="MainRows" type="VBoxContainer" parent="MainMargin" unique_id=629983092]
 layout_mode = 2
 
-[node name="BoardRow" type="CenterContainer" parent="MainMargin/MainRows" unique_id=1007131083]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin" unique_id=576540123]
 layout_mode = 2
+
+[node name="Player1Column" type="VBoxContainer" parent="MainMargin/HBoxContainer" unique_id=523935376]
+layout_mode = 2
+alignment = 1
+
+[node name="Player" parent="MainMargin/HBoxContainer/Player1Column" unique_id=1400750966 instance=ExtResource("3_ug6w8")]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="BoardRow" type="CenterContainer" parent="MainMargin/HBoxContainer" unique_id=1007131083]
+layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="GameBoard" parent="MainMargin/MainRows/BoardRow" unique_id=1255382976 instance=ExtResource("2_wdglq")]
+[node name="GameBoard" parent="MainMargin/HBoxContainer/BoardRow" unique_id=1255382976 instance=ExtResource("2_wdglq")]
 custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
 
-[node name="PlayerUIRow" type="HBoxContainer" parent="MainMargin/MainRows" unique_id=202592522]
+[node name="Player2Column" type="VBoxContainer" parent="MainMargin/HBoxContainer" unique_id=1999323621]
 layout_mode = 2
-theme_override_constants/separation = 100
 alignment = 1
 
-[node name="Player" parent="MainMargin/MainRows/PlayerUIRow" unique_id=1400750966 instance=ExtResource("3_ug6w8")]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-
-[node name="Player2" parent="MainMargin/MainRows/PlayerUIRow" unique_id=1340856035 instance=ExtResource("3_ug6w8")]
-custom_minimum_size = Vector2(50, 50)
+[node name="Player2" parent="MainMargin/HBoxContainer/Player2Column" unique_id=506196259 instance=ExtResource("3_ug6w8")]
+custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
