@@ -39,15 +39,16 @@ layout_mode = 2
 
 [node name="Player1Column" type="VBoxContainer" parent="MainMargin/HBoxContainer" unique_id=523935376]
 layout_mode = 2
+size_flags_horizontal = 6
 alignment = 1
 
 [node name="Player" parent="MainMargin/HBoxContainer/Player1Column" unique_id=1400750966 instance=ExtResource("3_ug6w8")]
-custom_minimum_size = Vector2(200, 50)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
 [node name="BoardRow" type="CenterContainer" parent="MainMargin/HBoxContainer" unique_id=1007131083]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 size_flags_vertical = 3
 
 [node name="GameBoard" parent="MainMargin/HBoxContainer/BoardRow" unique_id=1255382976 instance=ExtResource("2_wdglq")]
@@ -56,8 +57,9 @@ layout_mode = 2
 
 [node name="Player2Column" type="VBoxContainer" parent="MainMargin/HBoxContainer" unique_id=1999323621]
 layout_mode = 2
+size_flags_horizontal = 6
 alignment = 1
 
 [node name="Player2" parent="MainMargin/HBoxContainer/Player2Column" unique_id=506196259 instance=ExtResource("3_ug6w8")]
-custom_minimum_size = Vector2(200, 50)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2

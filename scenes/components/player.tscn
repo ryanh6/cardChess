@@ -9,5 +9,5 @@ grow_vertical = 2
 
 [node name="Name" type="Label" parent="." unique_id=644787706]
 layout_mode = 2
-text = "HELLO THERE"
+text = "PLAYER"
 horizontal_alignment = 1

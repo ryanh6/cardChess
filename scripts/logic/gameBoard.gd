@@ -42,5 +42,12 @@ func countTeamPieces(playerID: int):
 	
 	return count
 
-func movePiece(from: Vector2i, to: Vector2i):
-	print("moving")
+func movePiece(fromLocation: Vector2i, toLocation: Vector2i):
+	var movingPiece: Piece = pieceAt(fromLocation)
+	var capturedPiece: Piece = pieceAt(toLocation)
+	
+	if capturedPiece != null:
+		allPieces.erase(capturedPiece)
+	
+	movingPiece.position = toLocation
+	return capturedPiece
