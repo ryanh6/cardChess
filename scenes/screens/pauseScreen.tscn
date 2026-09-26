@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://we61dgd6s58r"]
 
+[ext_resource type="Script" uid="uid://blqpeg3wtd12y" path="res://scripts/interface/pauseScreen.gd" id="1_ibcx6"]
+
 [node name="PauseScreen" type="Control" unique_id=1617121548]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ibcx6")
 
 [node name="TransparentBackground" type="ColorRect" parent="." unique_id=1107923595]
 layout_mode = 0
@@ -23,4 +26,13 @@ anchor_bottom = 1.0
 layout_mode = 2
 
 [node name="Menu" type="VBoxContainer" parent="Center/Panel" unique_id=1961092599]
+layout_mode = 2
+
+[node name="Heading" type="Label" parent="Center/Panel/Menu" unique_id=1065032132]
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="Center/Panel/Menu" unique_id=1825479836]
+layout_mode = 2
+
+[node name="ReturnToTitleButton" type="Button" parent="Center/Panel/Menu" unique_id=781756968]
 layout_mode = 2
