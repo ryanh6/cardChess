@@ -28,3 +28,15 @@ layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="Center/PanelContainer" unique_id=568890945]
 layout_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="Center/PanelContainer/MarginContainer" unique_id=1354217407]
+layout_mode = 2
+
+[node name="Instructions" type="Label" parent="Center/PanelContainer/MarginContainer/Content" unique_id=1275298913]
+layout_mode = 2
+
+[node name="Selected" type="Label" parent="Center/PanelContainer/MarginContainer/Content" unique_id=1100887500]
+layout_mode = 2
+
+[node name="ConfirmButton" type="Button" parent="Center/PanelContainer/MarginContainer/Content" unique_id=1453200767]
+layout_mode = 2

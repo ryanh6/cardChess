@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://djcknm181ty0j"]
 
+[ext_resource type="Script" uid="uid://bfgtbxcimndxu" path="res://scripts/interface/titleScreen.gd" id="1_2iumj"]
+
 [node name="TitleScreen" type="Control" unique_id=1177297141]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,38 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2iumj")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1770703392]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1490957395]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Menu" type="VBoxContainer" parent="Center" unique_id=975774703]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Center/Menu" unique_id=1904674734]
+layout_mode = 2
+text = "Card Chess"
+
+[node name="StartButton" type="Button" parent="Center/Menu" unique_id=1370776963]
+layout_mode = 2
+text = "Start"
+
+[node name="OptionsButton" type="Button" parent="Center/Menu" unique_id=904588753]
+layout_mode = 2
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="Center/Menu" unique_id=306102234]
+layout_mode = 2
+text = "Quit"
