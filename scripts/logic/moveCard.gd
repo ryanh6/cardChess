@@ -14,6 +14,37 @@ var cardType = type;
 func _init(newType):
 	cardType = newType;
 
+func getName():
+	match(cardType):
+		type.ROOK:
+			return "Rook"
+		type.BISHOP:
+			return "BISHOP"
+		type.KNIGHT:
+			return "KNIGHT"
+		type.ATTACKER:
+			return "ATTACKER"
+		type.JUMPER:
+			return "JUMPER"
+	return ""
+	
+func getIcon():
+	var asset: Texture2D
+	
+	match(cardType):
+		type.ROOK:
+			asset = preload("res://assets/rookCard.png")
+		type.BISHOP:
+			asset = preload("res://assets/bishopCard.png")
+		type.KNIGHT:
+			asset = preload("res://assets/knightCard.png")
+		type.ATTACKER:
+			asset = preload("res://assets/attackerCard.png")
+		type.JUMPER:
+			asset = preload("res://assets/jumperCard.png")
+			
+	return asset
+
 func getMoves(gameBoard: Board, gamePiece: Piece):
 	var forward;
 	var directions = [];

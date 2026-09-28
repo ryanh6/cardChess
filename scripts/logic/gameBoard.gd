@@ -1,18 +1,27 @@
 extends Sprite2D
 class_name Board
 
-const BOARDSIZE: int = 5;
+const PLAYERPIECES: int = 5;
+var boardSize: int = 5;
 var allPieces: Array[Piece] = []
+
+func setSize(newSize: int):
+	if not [5, 7, 9].has(newSize):
+		return
+	boardSize = newSize
 
 func resetBoard():
 	allPieces.clear()
+	var firstColumn: int = (boardSize - PLAYERPIECES) / 2
 	
-	for column in BOARDSIZE:
-		allPieces.append(Piece.new(0, Vector2i(column, BOARDSIZE - 1)))
+	for offset in PLAYERPIECES:
+		var column: int = firstColumn + offset
+		
+		allPieces.append(Piece.new(0, Vector2i(column, boardSize - 1)))
 		allPieces.append(Piece.new(1, Vector2i(column, 0)))
 
 func isValidPosition(currentPosition: Vector2i):
-	return currentPosition.x >= 0 and currentPosition.x < BOARDSIZE and currentPosition.y >= 0 and currentPosition.y < BOARDSIZE
+	return currentPosition.x >= 0 and currentPosition.x < boardSize and currentPosition.y >= 0 and currentPosition.y < boardSize
 
 func pieceAt(currentPosition: Vector2i):
 	for piece in allPieces:

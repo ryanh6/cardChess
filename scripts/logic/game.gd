@@ -11,6 +11,9 @@ enum gamePhase {
 var gameBoard: Board = Board.new()
 var playerList: Array[Player] = [Player.new(0), Player.new(1)]
 
+func startMatch():
+	print("match")
+
 func startRound():
 	gameBoard.resetBoard()
 	
@@ -25,6 +28,9 @@ func moveCard():
 	
 func checkThrone():
 	print("check")
+	
+func opponentThrone():
+	print("opponent")
 	
 func finishRound():
 	print("hi")
