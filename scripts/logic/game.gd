@@ -72,5 +72,14 @@ func checkThrone():
 func opponentThrone():
 	print("opponent")
 	
-func endRound():
-	print("hi")
+func endRound(winnerID: int):
+	playerList[winnerID].roundsWon += 1;
+	
+	if playerList[winnerID].roundsWon >= matchSettings.roundWin:
+		phase = gamePhase.ENDGAME
+	else:
+		phase = gamePhase.ENDROUND
+		
+	finishRound.emit(winnerID)
+	if phase == gamePhase.ENDGAME:
+		finishMatch.emit(winnerID)
