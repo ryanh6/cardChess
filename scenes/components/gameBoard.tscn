@@ -20,3 +20,8 @@ grow_vertical = 2
 texture = ExtResource("1_irmpp")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Cells" type="GridContainer" parent="." unique_id=411142295]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
