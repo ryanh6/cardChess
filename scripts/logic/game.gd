@@ -45,9 +45,32 @@ func startRound():
 	selectedPiece = Vector2i(-1, -1)
 	selectedCardIndex = -1
 	throneOccupantID = -1
+	changed.emit()
 		
-func draftPhase():
-	print("hi")
+func draftPhase(secondPlayerCards: Array[Card], firstPlayerCards: Array[Card]):
+	if phase != gamePhase.DRAFT or secondPlayerCards.size() != 2 or firstPlayerCards.size() != 2:
+		return false
+	
+	var allCards: Array[Card] = [Card.new(Card.type.ROOK), Card.new(Card.type.BISHOP), Card.new(Card.type.KNIGHT), Card.new(Card.type.ATTACKER), Card.new(Card.type.JUMPER)]
+	var chosenCards: Array[Card] = secondPlayerCards + firstPlayerCards
+	var uniqueCards: Dictionary = {}
+	
+	for card in chosenCards:
+		uniqueCards[card] = true
+		
+	if uniqueCards.size() != 4:
+		return false
+	
+	playerList[secondPlayerID].currentCards = secondPlayerCards.duplicate()
+	playerList[1 - secondPlayerID].currentCards = firstPlayerCards.duplicate()
+	
+	for card in chosenCards:
+		allCards.erase(card)
+		
+	waitingCard = allCards[0]
+	phase = gamePhase.PLAYING
+	changed.emit()
+	return true
 	
 func checkLegalMoves():
 	if phase != gamePhase.PLAYING or selectedCardIndex < 0:
