@@ -12,7 +12,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l61cb")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=97364680]
+[node name="BoardTexture" type="TextureRect" parent="." unique_id=97364680]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,6 +25,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="CellGrid" type="GridContainer" parent="." unique_id=411142295]
+unique_name_in_owner = true
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0

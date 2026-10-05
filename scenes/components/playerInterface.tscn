@@ -17,18 +17,22 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="PlayerIcon" type="TextureRect" parent="Margins/Row" unique_id=54572932]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="PlayerInfo" type="VBoxContainer" parent="Margins/Row" unique_id=722835718]
 layout_mode = 2
 
 [node name="PlayerName" type="Label" parent="Margins/Row/PlayerInfo" unique_id=644787706]
+unique_name_in_owner = true
 layout_mode = 2
 text = "PLAYER"
 horizontal_alignment = 1
 
 [node name="ScoreLabel" type="Label" parent="Margins/Row/PlayerInfo" unique_id=1909537317]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="TurnLabel" type="Label" parent="Margins/Row/PlayerInfo" unique_id=1917136118]
+unique_name_in_owner = true
 layout_mode = 2

@@ -13,16 +13,19 @@ script = ExtResource("1_7k3l8")
 startingOwnerID = null
 
 [node name="HighlightColor" type="ColorRect" parent="." unique_id=72858949]
+unique_name_in_owner = true
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="ThroneLabel" type="Label" parent="." unique_id=889343168]
+unique_name_in_owner = true
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="PieceInterface" parent="." unique_id=1004829767 instance=ExtResource("1_utne3")]
+unique_name_in_owner = true
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0

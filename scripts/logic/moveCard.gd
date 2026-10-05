@@ -14,8 +14,8 @@ var cardType = type;
 func _init(newType):
 	cardType = newType;
 
-func getName():
-	match(cardType):
+static func getName(requestedType: type):
+	match(requestedType):
 		type.ROOK:
 			return "Rook"
 		type.BISHOP:
@@ -28,10 +28,10 @@ func getName():
 			return "JUMPER"
 	return ""
 	
-func getIcon():
+static func getIcon(requestedType: type):
 	var asset: Texture2D
 	
-	match(cardType):
+	match(requestedType):
 		type.ROOK:
 			asset = preload("res://assets/rookCard.png")
 		type.BISHOP:
@@ -70,7 +70,7 @@ func getMoves(gameBoard: Board, gamePiece: Piece):
 			
 			for locations in adjacent:
 				if gameBoard.pieceAt(gamePiece.piecePosition + locations) != null:
-					directions.append(position * 2)
+					directions.append(locations * 2)
 			
 	positions = directionToPosition(gamePiece, directions)
 	
