@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cvblemk8pxgoy"]
 
 [ext_resource type="Texture2D" uid="uid://cv4yccfp3mg43" path="res://assets/gameBoard.png" id="1_irmpp"]
+[ext_resource type="Script" uid="uid://dhua3tupoe3cj" path="res://scripts/interface/gameBoardInterface.gd" id="1_l61cb"]
 
 [node name="GameBoard" type="Control" unique_id=1255382976]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_l61cb")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=97364680]
 layout_mode = 1
@@ -21,7 +23,7 @@ texture = ExtResource("1_irmpp")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Cells" type="GridContainer" parent="." unique_id=411142295]
+[node name="CellGrid" type="GridContainer" parent="." unique_id=411142295]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0

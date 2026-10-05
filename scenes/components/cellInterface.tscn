@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ckmsabqve1u6x"]
+
+[ext_resource type="Script" uid="uid://sfyqsvakj2li" path="res://scripts/interface/cellInterface.gd" id="1_7k3l8"]
+[ext_resource type="PackedScene" uid="uid://dum2arij4y4vx" path="res://scenes/components/pieceInterface.tscn" id="1_utne3"]
+
+[node name="Cell" type="Button" unique_id=37027163]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7k3l8")
+startingOwnerID = null
+
+[node name="HighlightColor" type="ColorRect" parent="." unique_id=72858949]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ThroneLabel" type="Label" parent="." unique_id=889343168]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PieceInterface" parent="." unique_id=1004829767 instance=ExtResource("1_utne3")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
