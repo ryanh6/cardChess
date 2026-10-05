@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b8mbngbccnb5b" path="res://assets/gameBackground2.png" id="1_wdglq"]
 [ext_resource type="PackedScene" uid="uid://cvblemk8pxgoy" path="res://scenes/components/gameBoardInterface.tscn" id="2_wdglq"]
-[ext_resource type="PackedScene" uid="uid://ctmrg8muin1h4" path="res://scenes/components/player.tscn" id="3_ug6w8"]
+[ext_resource type="PackedScene" uid="uid://ctmrg8muin1h4" path="res://scenes/components/playerInterface.tscn" id="3_ug6w8"]
 
 [node name="GameScreen" type="Control" unique_id=14647702]
 layout_mode = 3

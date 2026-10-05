@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ctmrg8muin1h4"]
+
+[ext_resource type="Script" uid="uid://j3pmv5xoavpj" path="res://scripts/interface/playerInterface.gd" id="1_7dcxb"]
+
+[node name="Panel" type="PanelContainer" unique_id=1400750966]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7dcxb")
+
+[node name="Margins" type="MarginContainer" parent="." unique_id=720723643]
+layout_mode = 2
+
+[node name="Row" type="HBoxContainer" parent="Margins" unique_id=690352923]
+layout_mode = 2
+
+[node name="PlayerIcon" type="TextureRect" parent="Margins/Row" unique_id=54572932]
+layout_mode = 2
+
+[node name="PlayerInfo" type="VBoxContainer" parent="Margins/Row" unique_id=722835718]
+layout_mode = 2
+
+[node name="PlayerName" type="Label" parent="Margins/Row/PlayerInfo" unique_id=644787706]
+layout_mode = 2
+text = "PLAYER"
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="Margins/Row/PlayerInfo" unique_id=1909537317]
+layout_mode = 2
+
+[node name="TurnLabel" type="Label" parent="Margins/Row/PlayerInfo" unique_id=1917136118]
+layout_mode = 2
