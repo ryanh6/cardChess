@@ -2,5 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d1d8y1v8uqhjw" path="res://scripts/logic/main.gd" id="1_sugp2"]
 
-[node name="Main" type="Node" unique_id=623304676]
+[node name="Main" type="Control" unique_id=2133621328]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_sugp2")

@@ -62,9 +62,13 @@ func _refresh():
 	waitingCard.setSelected(false)
 	
 	if game.phase == Game.gamePhase.ENDROUND or game.phase == Game.gamePhase.ENDGAME:
-		nextRoundAction.visible = game.phase
-		###########################################
+		nextRoundButton.visible = true
 		
+	if game.phase == Game.gamePhase.ENDROUND:
+		nextRoundButton.text = "Next Round"
+	else:
+		nextRoundButton.text = "Return To Title Screen"
+	
 func updateHand(playerID: int, playerHand: Array[CardInterface]):
 	var currentHand: Array[Card] = game.playerList[playerID].currentCards
 	
@@ -76,5 +80,34 @@ func updateHand(playerID: int, playerHand: Array[CardInterface]):
 			continue
 			
 		currentCard.setCardType(currentHand[index].cardType)
-		
+		if game.phase != Game.gamePhase.PLAYING or playerID != game.currentPlayerID:
+			currentCard.disabled = true
+		currentCard.setSelected(playerID == game.currentPlayerID and index == game.selectedCardIndex)
 	
+func onHandCardSelected(cardType: Card.type, playerID: int, cardIndex: int):
+	if game == null or game.phase != Game.gamePhase.PLAYING:
+		return
+		
+	if playerID != game.currentPlayerID:
+		return
+		
+	game.selectedCardIndex = cardIndex
+	_refresh()
+	
+func onCellSelected(cell: Vector2i):
+	if game == null or game.phase != Game.gamePhase.PLAYING:
+		return
+		
+	var piece: Piece = game.gameBoard.pieceAt(cell)
+	
+	if game.selectedPiece != Vector2i(-1, -1) and game.selectedCardIndex >= 0 and game.checkLegalMoves().has(cell):
+		game.tryMoves(game.selectedPiece, cell, game.selectedCardIndex)
+	elif piece != null and piece.ownerID == game.currentPlayerID:
+		game.selectedPiece = cell
+		_refresh()
+
+func onRoundAction():
+	if game.phase == Game.gamePhase.ENDROUND:
+		requestNextRound.emit()
+	else:
+		requestTitle.emit()
