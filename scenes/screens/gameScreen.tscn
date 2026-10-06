@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://h6cv5xcntkfq"]
 
 [ext_resource type="Texture2D" uid="uid://b8mbngbccnb5b" path="res://assets/gameBackground2.png" id="1_wdglq"]
+[ext_resource type="Script" uid="uid://3kswxhonx04j" path="res://scripts/interface/gameScreen.gd" id="1_wkxm6"]
 [ext_resource type="PackedScene" uid="uid://cvblemk8pxgoy" path="res://scenes/components/gameBoardInterface.tscn" id="2_wdglq"]
 [ext_resource type="PackedScene" uid="uid://bc5bvmcgqp5r5" path="res://scenes/components/cardInterface.tscn" id="3_jys3q"]
 [ext_resource type="PackedScene" uid="uid://ctmrg8muin1h4" path="res://scenes/components/playerInterface.tscn" id="3_ug6w8"]
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wkxm6")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1737016141]
 layout_mode = 0

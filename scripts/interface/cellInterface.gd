@@ -16,7 +16,7 @@ const BLACKPIECE: Texture2D = preload("res://assets/blackPiece.png")
 
 func _ready():
 	if not Engine.is_editor_hint():
-		pressed.connect(sendPositionSignal())
+		pressed.connect(sendPositionSignal)
 	highlight.visible = false
 	displayPiece(startingOwnerID)
 
