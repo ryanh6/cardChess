@@ -18,7 +18,9 @@ layout_mode = 2
 
 [node name="PlayerIcon" type="TextureRect" parent="Margins/Row" unique_id=54572932]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+expand_mode = 1
 
 [node name="PlayerInfo" type="VBoxContainer" parent="Margins/Row" unique_id=722835718]
 layout_mode = 2

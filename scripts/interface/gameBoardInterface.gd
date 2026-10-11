@@ -78,7 +78,7 @@ func updateBoardRotation():
 	boardTexture.rotation = PI / 2
 
 func refresh(gameBoard: Board, selectedCell: Vector2i, legalMovesList: Array[Vector2i]):
-	if gameBoard.size != currentBoardSize:
+	if gameBoard.boardSize != currentBoardSize:
 		buildGrid(gameBoard.size)
 		
 	for cell in cells:

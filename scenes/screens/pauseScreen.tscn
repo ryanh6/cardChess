@@ -35,9 +35,11 @@ text = "PAUSED"
 horizontal_alignment = 1
 
 [node name="ResumeButton" type="Button" parent="Center/Panel/Menu" unique_id=1825479836]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Resume"
 
 [node name="ReturnToTitleButton" type="Button" parent="Center/Panel/Menu" unique_id=781756968]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Return To Title"

@@ -1,8 +1,42 @@
 [gd_scene format=3 uid="uid://bhyw5pjf1sqju"]
 
 [ext_resource type="Script" uid="uid://d1d8y1v8uqhjw" path="res://scripts/logic/main.gd" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://djcknm181ty0j" path="res://scenes/screens/titleScreen.tscn" id="2_tefeu"]
+[ext_resource type="PackedScene" uid="uid://s50h1niqkx8g" path="res://scenes/screens/optionScreen.tscn" id="3_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://h6cv5xcntkfq" path="res://scenes/screens/gameScreen.tscn" id="4_tipki"]
+[ext_resource type="PackedScene" uid="uid://bg4xknc347wko" path="res://scenes/screens/draftScreen.tscn" id="5_85g3d"]
+[ext_resource type="PackedScene" uid="uid://we61dgd6s58r" path="res://scenes/screens/pauseScreen.tscn" id="6_choun"]
 
 [node name="Main" type="Control" unique_id=2133621328]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_sugp2")
+
+[node name="Screens" type="Control" parent="." unique_id=818080039]
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="TitleScreen" parent="Screens" unique_id=1177297141 instance=ExtResource("2_tefeu")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="OptionScreen" parent="Screens" unique_id=1983737169 instance=ExtResource("3_o6xl0")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="GameScreen" parent="Screens" unique_id=14647702 instance=ExtResource("4_tipki")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="DraftScreen" parent="Screens" unique_id=1902149979 instance=ExtResource("5_85g3d")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="PauseScreen" parent="Screens" unique_id=1617121548 instance=ExtResource("6_choun")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1

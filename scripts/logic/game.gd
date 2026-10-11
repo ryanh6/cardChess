@@ -72,7 +72,7 @@ func draftPhase(secondPlayerCards: Array[Card], firstPlayerCards: Array[Card]):
 	changed.emit()
 	return true
 	
-func checkLegalMoves():
+func checkLegalMoves() -> Array[Vector2i]:
 	if phase != gamePhase.PLAYING or selectedCardIndex < 0:
 		return []
 		
