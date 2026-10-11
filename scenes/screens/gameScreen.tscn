@@ -34,56 +34,104 @@ theme_override_constants/margin_top = 25
 theme_override_constants/margin_right = 25
 theme_override_constants/margin_bottom = 25
 
-[node name="MainRows" type="VBoxContainer" parent="MainMargin" unique_id=629983092]
+[node name="MainRows" type="HBoxContainer" parent="MainMargin" unique_id=48520874]
 layout_mode = 2
 
 [node name="Player1Column" type="VBoxContainer" parent="MainMargin/MainRows" unique_id=523935376]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 6
 alignment = 1
 
 [node name="Player1Panel" parent="MainMargin/MainRows/Player1Column" unique_id=1400750966 instance=ExtResource("3_ug6w8")]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
-[node name="Player1Label" type="Label" parent="MainMargin/MainRows/Player1Column" unique_id=1259714728]
+[node name="Player1HandLabel" type="Label" parent="MainMargin/MainRows/Player1Column" unique_id=1259714728]
 layout_mode = 2
+text = "Player 1's Hand"
+horizontal_alignment = 1
 
 [node name="Player1Hand" type="HBoxContainer" parent="MainMargin/MainRows/Player1Column" unique_id=536068488]
 layout_mode = 2
 
 [node name="Player1Card1" parent="MainMargin/MainRows/Player1Column/Player1Hand" unique_id=965759258 instance=ExtResource("3_jys3q")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Player1Card2" parent="MainMargin/MainRows/Player1Column/Player1Hand" unique_id=1839754896 instance=ExtResource("3_jys3q")]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="BoardRow" type="CenterContainer" parent="MainMargin/MainRows" unique_id=1007131083]
+[node name="CenterColumn" type="VBoxContainer" parent="MainMargin/MainRows" unique_id=1607484312]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameStatus" type="VBoxContainer" parent="MainMargin/MainRows/CenterColumn" unique_id=148172950]
+layout_mode = 2
+
+[node name="TurnLabel" type="Label" parent="MainMargin/MainRows/CenterColumn/GameStatus" unique_id=825990565]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="MainMargin/MainRows/CenterColumn/GameStatus" unique_id=2035720596]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="BoardCenter" type="CenterContainer" parent="MainMargin/MainRows/CenterColumn" unique_id=1007131083]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 3
 
-[node name="GameBoard" parent="MainMargin/MainRows/BoardRow" unique_id=1255382976 instance=ExtResource("2_wdglq")]
+[node name="GameBoard" parent="MainMargin/MainRows/CenterColumn/BoardCenter" unique_id=1255382976 instance=ExtResource("2_wdglq")]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
 
+[node name="WaitingCardLabel" type="Label" parent="MainMargin/MainRows/CenterColumn" unique_id=392858201]
+layout_mode = 2
+text = "Waiting Card"
+horizontal_alignment = 1
+
+[node name="WaitingCardCenter" type="CenterContainer" parent="MainMargin/MainRows/CenterColumn" unique_id=393443092]
+layout_mode = 2
+
+[node name="WaitingCard" parent="MainMargin/MainRows/CenterColumn/WaitingCardCenter" unique_id=2009131815 instance=ExtResource("3_jys3q")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PauseButton" type="Button" parent="MainMargin/MainRows/CenterColumn" unique_id=1624561454]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="NextRoundButton" type="Button" parent="MainMargin/MainRows/CenterColumn" unique_id=2081469918]
+unique_name_in_owner = true
+layout_mode = 2
+
 [node name="Player2Column" type="VBoxContainer" parent="MainMargin/MainRows" unique_id=1999323621]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 6
 alignment = 1
 
 [node name="Player2Panel" parent="MainMargin/MainRows/Player2Column" unique_id=506196259 instance=ExtResource("3_ug6w8")]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
-[node name="Player2Label" type="Label" parent="MainMargin/MainRows/Player2Column" unique_id=1684535224]
+[node name="Player2HandLabel" type="Label" parent="MainMargin/MainRows/Player2Column" unique_id=1684535224]
 layout_mode = 2
+text = "Player 2's Hand"
+horizontal_alignment = 1
 
 [node name="Player2Hand" type="HBoxContainer" parent="MainMargin/MainRows/Player2Column" unique_id=670264337]
 layout_mode = 2
 
 [node name="Player2Card1" parent="MainMargin/MainRows/Player2Column/Player2Hand" unique_id=1017336691 instance=ExtResource("3_jys3q")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Player2Card2" parent="MainMargin/MainRows/Player2Column/Player2Hand" unique_id=1132798011 instance=ExtResource("3_jys3q")]
+unique_name_in_owner = true
 layout_mode = 2
