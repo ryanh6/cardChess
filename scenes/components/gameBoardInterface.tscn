@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cvblemk8pxgoy"]
 
-[ext_resource type="Texture2D" uid="uid://cv4yccfp3mg43" path="res://assets/gameBoard.png" id="1_irmpp"]
 [ext_resource type="Script" uid="uid://dhua3tupoe3cj" path="res://scripts/interface/gameBoardInterface.gd" id="1_l61cb"]
+[ext_resource type="Texture2D" uid="uid://dil5umy5suomn" path="res://assets/newGameBoard.png" id="2_j2gl2"]
 
 [node name="GameBoard" type="Control" unique_id=1255382976]
 layout_mode = 3
@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_irmpp")
+texture = ExtResource("2_j2gl2")
 expand_mode = 1
 stretch_mode = 5
 
