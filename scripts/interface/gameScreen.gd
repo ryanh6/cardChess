@@ -57,9 +57,13 @@ func _refresh():
 	updateHand(0, playerOneCards)
 	updateHand(1, playerTwoCards)
 	
-	waitingCard.setCardType(game.waitingCard)
-	waitingCard.disabled = true
-	waitingCard.setSelected(false)
+	if game.waitingCard != null:
+		waitingCard.visible = true
+		waitingCard.setCardType(game.waitingCard.cardType)
+		waitingCard.disabled = true
+		waitingCard.setSelected(false)
+	else:
+		waitingCard.visible = false
 	
 	if game.phase == Game.gamePhase.ENDROUND or game.phase == Game.gamePhase.ENDGAME:
 		nextRoundButton.visible = true
@@ -69,7 +73,7 @@ func _refresh():
 	else:
 		nextRoundButton.text = "Return To Title Screen"
 	
-func updateHand(playerID: int, playerHand: Array[CardInterface]):
+func updateHand(playerID: int, playerHand: Array[CardInterface]) -> void:
 	var currentHand: Array[Card] = game.playerList[playerID].currentCards
 	
 	for index in playerHand.size():
@@ -80,8 +84,7 @@ func updateHand(playerID: int, playerHand: Array[CardInterface]):
 			continue
 			
 		currentCard.setCardType(currentHand[index].cardType)
-		if game.phase != Game.gamePhase.PLAYING or playerID != game.currentPlayerID:
-			currentCard.disabled = true
+		currentCard.disabled = (game.phase != Game.gamePhase.PLAYING or playerID != game.currentPlayerID)
 		currentCard.setSelected(playerID == game.currentPlayerID and index == game.selectedCardIndex)
 	
 func onHandCardSelected(cardType: Card.type, playerID: int, cardIndex: int):

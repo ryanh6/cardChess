@@ -19,7 +19,7 @@ var phase = gamePhase.DRAFT
 
 var currentPlayerID: int = 0
 var secondPlayerID: int = 1
-var waitingCard = Card.type.ROOK
+var waitingCard = Card.new(Card.type.ROOK)
 var selectedPiece: Vector2i
 var selectedCardIndex: int
 var throneOccupantID: int

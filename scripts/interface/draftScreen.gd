@@ -33,11 +33,14 @@ func onCardSelected(currentCardType: Card.type):
 		cardSelection = secondPlayerCardList
 	else:
 		cardSelection = firstPlayerCardList
-		
-	if cardSelection.has(currentCardType):
-		cardSelection.erase(currentCardType)
+	
+	var existingCard: Card = findCardByType(cardSelection, currentCardType)
+	
+	if existingCard != null:
+		cardSelection.erase(existingCard)
 	elif cardSelection.size() < 2:
-		cardSelection.append(currentCardType)
+		var newCard: Card = Card.new(currentCardType)
+		cardSelection.append(newCard)
 	
 	_refresh()
 
@@ -63,9 +66,23 @@ func _refresh():
 	selectionLabel.text = "Selected: %d / 2" % cardSelection.size()
 	confirmationButton.disabled = cardSelection.size() != 2
 	
-	for card in cardList:
-		var currentType = card.cardType
+	for cardInterface in cardList:
+		var currentType: Card.type = cardInterface.cardType
 		
-		card.visible = secondPlayerChoosing or not secondPlayerCardList.has(currentType)
-		card.disabled = false
-		card.setSelected(cardSelection.has(currentType))
+		var chosenBySecondPlayer: bool = hasCardType(secondPlayerCardList, currentType)
+		var currentlySelected: bool = hasCardType(cardSelection, currentType)
+		
+		cardInterface.visible = (secondPlayerChoosing or not chosenBySecondPlayer)
+		
+		cardInterface.disabled = false
+		cardInterface.setSelected(currentlySelected)
+		
+func findCardByType(cardList: Array[Card], requestedType: Card.type) -> Card:
+	for card in cardList:
+		if card.cardType == requestedType:
+			return card
+			
+	return null
+	
+func hasCardType(cardList: Array[Card], requestedType: Card.type) -> bool:
+	return findCardByType(cardList, requestedType) != null
