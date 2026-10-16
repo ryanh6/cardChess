@@ -60,7 +60,7 @@ func _refresh():
 		instructionLabel.text = "Player 2: Choose Two Cards for Player 1"
 		confirmationButton.text = "Start Game"
 	
-	selectionLabel.text = "Selected %d / 2" % cardSelection.size()
+	selectionLabel.text = "Selected: %d / 2" % cardSelection.size()
 	confirmationButton.disabled = cardSelection.size() != 2
 	
 	for card in cardList:

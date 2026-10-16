@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://j3pmv5xoavpj" path="res://scripts/interface/playerInterface.gd" id="1_7dcxb"]
 
-[node name="Panel" type="PanelContainer" unique_id=1400750966]
+[node name="PlayerInterface" type="Control" unique_id=367075809]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -10,31 +12,39 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7dcxb")
 
-[node name="Margins" type="MarginContainer" parent="." unique_id=720723643]
-layout_mode = 2
-
-[node name="Row" type="HBoxContainer" parent="Margins" unique_id=690352923]
-layout_mode = 2
-
-[node name="PlayerIcon" type="TextureRect" parent="Margins/Row" unique_id=54572932]
+[node name="PlayerIcon" type="TextureRect" parent="." unique_id=54572932]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(250, 250)
-layout_mode = 2
-expand_mode = 2
+custom_maximum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -125.0
+offset_right = 125.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
 
-[node name="PlayerInfo" type="VBoxContainer" parent="Margins/Row" unique_id=722835718]
-layout_mode = 2
-
-[node name="PlayerName" type="Label" parent="Margins/Row/PlayerInfo" unique_id=644787706]
+[node name="PlayerName" type="Label" parent="." unique_id=1333473220]
 unique_name_in_owner = true
-layout_mode = 2
-text = "PLAYER"
-horizontal_alignment = 1
-
-[node name="ScoreLabel" type="Label" parent="Margins/Row/PlayerInfo" unique_id=1909537317]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="TurnLabel" type="Label" parent="Margins/Row/PlayerInfo" unique_id=1917136118]
-unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1280.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 8
+text = "PLAYER NAME"
+horizontal_alignment = 2
+vertical_alignment = 2

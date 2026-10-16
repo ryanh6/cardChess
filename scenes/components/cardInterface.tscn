@@ -3,30 +3,33 @@
 [ext_resource type="Script" uid="uid://bbuf1cl4b61q2" path="res://scripts/interface/cardInterface.gd" id="1_3fec2"]
 
 [node name="CardPanel" type="Button" unique_id=965759258]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+custom_minimum_size = Vector2(140, 170)
+offset_right = 140.0
+offset_bottom = 170.0
 script = ExtResource("1_3fec2")
 
 [node name="CardIcon" type="TextureRect" parent="." unique_id=1366594272]
 unique_name_in_owner = true
 layout_mode = 0
-offset_right = 247.0
-offset_bottom = 348.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 132.0
+offset_bottom = 136.0
 expand_mode = 1
 stretch_mode = 4
 
 [node name="CardName" type="Label" parent="." unique_id=364786018]
 unique_name_in_owner = true
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_top = 140.0
+offset_right = 140.0
+offset_bottom = 170.0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SelectedBorder" type="Panel" parent="." unique_id=554412221]
 unique_name_in_owner = true
 visible = false
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 140.0
+offset_bottom = 170.0

@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Control
 class_name PlayerInterface
 
 @export var playerName: String = "Player"
@@ -6,8 +6,8 @@ class_name PlayerInterface
 
 @onready var icon: TextureRect = %PlayerIcon
 @onready var nameLabel: Label = %PlayerName
-@onready var scoreLabel: Label = %ScoreLabel
-@onready var turnLabel: Label = %TurnLabel
+#@onready var scoreLabel: Label = %ScoreLabel
+#@onready var turnLabel: Label = %TurnLabel
 
 func _ready():
 	icon.texture = playerIcon
@@ -15,8 +15,8 @@ func _ready():
 	nameLabel.text = playerName
 
 func updatePanel(score: int, isCurrent: bool):
-	scoreLabel.text = "Rounds: %d" % score
-	turnLabel.visible = isCurrent
+	#scoreLabel.text = "Rounds: %d" % score
+	#turnLabel.visible = isCurrent
 	icon.pivot_offset = icon.size / 2
 	
 	if isCurrent:

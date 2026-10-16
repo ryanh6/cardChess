@@ -47,14 +47,8 @@ alignment = 1
 
 [node name="Player1Panel" parent="MainMargin/MainRows/Player1Column" unique_id=1400750966 instance=ExtResource("3_ug6w8")]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 playerIcon = ExtResource("4_443wr")
-
-[node name="Player1HandLabel" type="Label" parent="MainMargin/MainRows/Player1Column" unique_id=1259714728]
-layout_mode = 2
-text = "Player 1's Hand"
-horizontal_alignment = 1
 
 [node name="Player1Hand" type="HBoxContainer" parent="MainMargin/MainRows/Player1Column" unique_id=536068488]
 layout_mode = 2
@@ -110,7 +104,9 @@ layout_mode = 2
 
 [node name="NextRoundButton" type="Button" parent="MainMargin/MainRows/CenterColumn" unique_id=2081469918]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="Player2Column" type="VBoxContainer" parent="MainMargin/MainRows" unique_id=1999323621]
 unique_name_in_owner = true
@@ -120,14 +116,8 @@ alignment = 1
 
 [node name="Player2Panel" parent="MainMargin/MainRows/Player2Column" unique_id=506196259 instance=ExtResource("3_ug6w8")]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 playerIcon = ExtResource("7_wu7l8")
-
-[node name="Player2HandLabel" type="Label" parent="MainMargin/MainRows/Player2Column" unique_id=1684535224]
-layout_mode = 2
-text = "Player 2's Hand"
-horizontal_alignment = 1
 
 [node name="Player2Hand" type="HBoxContainer" parent="MainMargin/MainRows/Player2Column" unique_id=670264337]
 layout_mode = 2
