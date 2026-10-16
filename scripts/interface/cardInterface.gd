@@ -9,19 +9,19 @@ var cardType: Card.type = Card.type.ROOK
 @onready var cardName: Label = %CardName
 @onready var border: Panel = %SelectedBorder
 
-func _ready():
+func _ready() -> void:
 	pressed.connect(onPressed)
 	refresh()
 
-func setSelected(value: bool):
+func setSelected(value: bool) -> void:
 	button_pressed = value
 	border.visible = value
 
-func refresh():
+func refresh() -> void:
 	cardIcon.texture = Card.getIcon(cardType)
 	cardName.text = Card.getName(cardType)
 
-func setCardType(newCardType: Card.type):
+func setCardType(newCardType: Card.type) -> void:
 	cardType = newCardType
 	
 	if is_node_ready():
