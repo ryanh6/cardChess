@@ -13,7 +13,6 @@ signal requestTitle
 @onready var playerOneCards: Array[CardInterface] = [%Player1Card1, %Player1Card2]
 @onready var playerTwoCards: Array[CardInterface] = [%Player2Card1, %Player2Card2]
 @onready var waitingCard: CardInterface = %WaitingCard
-@onready var turnLabel: Label = %TurnLabel
 @onready var scoreLabel: Label = %ScoreLabel
 @onready var pauseButton: Button = %PauseButton
 @onready var nextRoundButton: Button = %NextRoundButton
@@ -51,7 +50,6 @@ func _refresh():
 		playerTwoColumn.modulate = Color(1, 1, 1, 1)
 		playerOneColumn.modulate = Color(0.5, 0.5, 0.5, 0.7)
 	
-	turnLabel.text = "Player %d's Turn" % (game.currentPlayerID + 1)
 	scoreLabel.text = "Score %d - %d" % [game.playerList[0].roundsWon, game.playerList[1].roundsWon]
 	
 	updateHand(0, playerOneCards)

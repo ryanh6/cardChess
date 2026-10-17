@@ -31,10 +31,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 25
-theme_override_constants/margin_top = 25
-theme_override_constants/margin_right = 25
-theme_override_constants/margin_bottom = 25
+theme_override_constants/margin_left = 38
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_right = 39
+theme_override_constants/margin_bottom = 32
 
 [node name="MainRows" type="HBoxContainer" parent="MainMargin" unique_id=48520874]
 layout_mode = 2
@@ -68,10 +68,6 @@ size_flags_horizontal = 3
 [node name="GameStatus" type="VBoxContainer" parent="MainMargin/MainRows/CenterColumn" unique_id=148172950]
 layout_mode = 2
 
-[node name="TurnLabel" type="Label" parent="MainMargin/MainRows/CenterColumn/GameStatus" unique_id=825990565]
-unique_name_in_owner = true
-layout_mode = 2
-
 [node name="ScoreLabel" type="Label" parent="MainMargin/MainRows/CenterColumn/GameStatus" unique_id=2035720596]
 unique_name_in_owner = true
 layout_mode = 2
@@ -95,10 +91,6 @@ horizontal_alignment = 1
 layout_mode = 2
 
 [node name="WaitingCard" parent="MainMargin/MainRows/CenterColumn/WaitingCardCenter" unique_id=2009131815 instance=ExtResource("3_jys3q")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="PauseButton" type="Button" parent="MainMargin/MainRows/CenterColumn" unique_id=1624561454]
 unique_name_in_owner = true
 layout_mode = 2
 
@@ -129,3 +121,11 @@ layout_mode = 2
 [node name="Player2Card2" parent="MainMargin/MainRows/Player2Column/Player2Hand" unique_id=1132798011 instance=ExtResource("3_jys3q")]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="PauseButton" type="Button" parent="." unique_id=1624561454]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1191.0
+offset_top = 28.0
+offset_right = 1241.0
+offset_bottom = 78.0
