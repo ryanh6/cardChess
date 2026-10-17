@@ -58,5 +58,5 @@ func movePiece(fromLocation: Vector2i, toLocation: Vector2i):
 	if capturedPiece != null:
 		allPieces.erase(capturedPiece)
 	
-	movingPiece.position = toLocation
+	movingPiece.piecePosition = toLocation
 	return capturedPiece
