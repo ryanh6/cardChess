@@ -33,3 +33,4 @@ visible = false
 layout_mode = 0
 offset_right = 140.0
 offset_bottom = 170.0
+mouse_filter = 2

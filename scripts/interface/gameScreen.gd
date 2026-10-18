@@ -63,9 +63,9 @@ func _refresh():
 	else:
 		waitingCard.visible = false
 	
-	if game.phase == Game.gamePhase.ENDROUND or game.phase == Game.gamePhase.ENDGAME:
-		nextRoundButton.visible = true
-		
+	var roundFinished: bool = (game.phase == Game.gamePhase.ENDROUND or game.phase == Game.gamePhase.ENDGAME)
+	nextRoundButton.visible = roundFinished
+	
 	if game.phase == Game.gamePhase.ENDROUND:
 		nextRoundButton.text = "Next Round"
 	else:
