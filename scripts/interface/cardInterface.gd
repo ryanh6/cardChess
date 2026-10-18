@@ -10,6 +10,9 @@ var cardType: Card.type = Card.type.ROOK
 @onready var border: Panel = %SelectedBorder
 
 func _ready() -> void:
+	get_window().min_size = Vector2i(960, 540)
+	get_window().mode = Window.MODE_FULLSCREEN
+	
 	pressed.connect(onPressed)
 	refresh()
 
