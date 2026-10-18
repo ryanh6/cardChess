@@ -64,8 +64,11 @@ func draftPhase(secondPlayerCards: Array[Card], firstPlayerCards: Array[Card]):
 	playerList[secondPlayerID].currentCards = secondPlayerCards.duplicate()
 	playerList[1 - secondPlayerID].currentCards = firstPlayerCards.duplicate()
 	
-	for card in chosenCards:
-		allCards.erase(card)
+	for selectedCard in chosenCards:
+		for availableCard in allCards:
+			if availableCard.cardType == selectedCard.cardType:
+				allCards.erase(availableCard)
+				break
 		
 	waitingCard = allCards[0]
 	phase = gamePhase.PLAYING

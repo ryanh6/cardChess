@@ -56,14 +56,14 @@ func setBoardMargins(useImage: bool):
 	var margins: float
 	
 	if useImage == true:
-		margins = 17.5
+		margins = 12.5
 	else:
 		margins = 0.0
 	
-	cellGrid.offset_left = margins
-	cellGrid.offset_top = margins
-	cellGrid.offset_right = -margins
-	cellGrid.offset_bottom = -margins
+	cellGrid.offset_left = 9.5
+	cellGrid.offset_top = 8
+	cellGrid.offset_right = -11.5
+	cellGrid.offset_bottom = -8
 	
 func isThrone(position: Vector2i, gridSize: int):
 	var centerColumn: int = gridSize / 2
