@@ -11,6 +11,9 @@ var bestOfDefault: int = 3
 var boardSizeDefault: int = 5
 
 func _ready():
+	get_window().min_size = Vector2i(960, 540)
+	get_window().mode = Window.MODE_FULLSCREEN
+	
 	titleScreen.requestStart.connect(startMatch)
 	titleScreen.requestOptions.connect(showOptions)
 	
