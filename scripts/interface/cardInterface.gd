@@ -6,7 +6,6 @@ signal cardSelected(cardType: Card.type)
 var cardType: Card.type = Card.type.ROOK
 
 @onready var cardIcon: TextureRect = %CardIcon
-@onready var cardName: Label = %CardName
 @onready var border: Panel = %SelectedBorder
 
 func _ready() -> void:
@@ -19,7 +18,6 @@ func setSelected(value: bool) -> void:
 
 func refresh() -> void:
 	cardIcon.texture = Card.getIcon(cardType)
-	cardName.text = Card.getName(cardType)
 
 func setCardType(newCardType: Card.type) -> void:
 	cardType = newCardType

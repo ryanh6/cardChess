@@ -55,6 +55,7 @@ playerIcon = ExtResource("4_443wr")
 
 [node name="Player1Hand" type="HBoxContainer" parent="MainMargin/MainRows/Player1Column" unique_id=536068488]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="Player1Card1" parent="MainMargin/MainRows/Player1Column/Player1Hand" unique_id=965759258 instance=ExtResource("3_jys3q")]
 unique_name_in_owner = true
@@ -116,6 +117,7 @@ playerIcon = ExtResource("7_wu7l8")
 
 [node name="Player2Hand" type="HBoxContainer" parent="MainMargin/MainRows/Player2Column" unique_id=670264337]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="Player2Card1" parent="MainMargin/MainRows/Player2Column/Player2Hand" unique_id=1017336691 instance=ExtResource("3_jys3q")]
 unique_name_in_owner = true
