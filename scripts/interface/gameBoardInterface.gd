@@ -55,11 +55,6 @@ func clearGrid():
 func setBoardMargins(useImage: bool):
 	var margins: float
 	
-	if useImage == true:
-		margins = 12.5
-	else:
-		margins = 0.0
-	
 	cellGrid.offset_left = 9.5
 	cellGrid.offset_top = 8
 	cellGrid.offset_right = -11.5
@@ -79,7 +74,7 @@ func updateBoardRotation():
 
 func refresh(gameBoard: Board, selectedCell: Vector2i, legalMovesList: Array[Vector2i]):
 	if gameBoard.boardSize != currentBoardSize:
-		buildGrid(gameBoard.size)
+		buildGrid(gameBoard.boardSize)
 		
 	for cell in cells:
 		var piece: Piece = gameBoard.pieceAt(cell.boardPosition)

@@ -56,7 +56,10 @@ func draftPhase(secondPlayerCards: Array[Card], firstPlayerCards: Array[Card]):
 	var uniqueCards: Dictionary = {}
 	
 	for card in chosenCards:
-		uniqueCards[card] = true
+		if uniqueCards.has(card.cardType):
+			return false
+		
+		uniqueCards[card.cardType] = true
 		
 	if uniqueCards.size() != 4:
 		return false
