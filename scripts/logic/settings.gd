@@ -22,8 +22,12 @@ func setBoardSize(newSize: int):
 #	- coin flip first round?
 # - Move timer or no? (ex: 30 seconds to make move)
 # - Randomize card (instead of draft phase)
+# - starting player picks their own cards???
+# - properly implement board sizes
+# - pass button allowed???
 # - Add new cards (Pawn, General, King, Queen)
 #	- How many cards in waiting zone?
 #	- How to pick which card to take? (random, most recent, self pick)
 #	- which cards to include in the game?
 #	- how many total cards in game (5 - 9)
+#	- new hand size???

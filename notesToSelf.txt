@@ -1,0 +1,25 @@
+Things to do
+
+Basic
+- fix cell inconsistency
+- add card hover and select animations
+- add screen transitions (simple swipes is enough)
+- add card move-to-wait, piece move transitions
+- remove nextroundbutton, put round won screen (only for a few seconds?)
+- fix player name
+- make pause icon
+- improve on settings
+- make proper score UI at the top
+- fix center column margins (i want score on top line, board near center, waiting card shifted up more)
+- remove waiting card showing during draft phase
+
+- decorate pause screen
+- decorate settings screen
+- decorate title screen
+- decorate draft ui
+
+Complicated
+- add multiplayer
+- add resizable screens
+- add mobile version
+- port the game
