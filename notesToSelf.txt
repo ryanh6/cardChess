@@ -7,6 +7,7 @@ Basic
 - add card move-to-wait, piece move transitions
 - remove nextroundbutton, put round won screen (only for a few seconds?)
 - fix player name
+- pause screen during draft phase
 - make pause icon
 - improve on settings
 - make proper score UI at the top
