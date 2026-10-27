@@ -4,11 +4,12 @@ class_name CellInterface
 
 signal cellSelected(position: Vector2i)
 
-const WHITEPIECE: Texture2D = preload("res://assets/whitePiece.png")
-const BLACKPIECE: Texture2D = preload("res://assets/blackPiece.png")
+#const WHITEPIECE: Texture2D = preload("res://assets/whitePiece.png")
+#const BLACKPIECE: Texture2D = preload("res://assets/blackPiece.png")
 
 @export var boardPosition: Vector2i
-@export_enum("Empty: -1", "Player 1: 0", "Player 2: 1") var startingOwnerID: int = -1
+@export_enum("Empty: -1", "Player 1: 0", "Player 2: 1") 
+var startingOwnerID: int = -1
 
 @onready var pieceView: TextureRect = %PieceInterface
 @onready var highlight: ColorRect = %HighlightColor
@@ -24,12 +25,7 @@ func sendPositionSignal():
 	cellSelected.emit(boardPosition)
 
 func displayPiece(ownerID: int):
-	if ownerID == 0:
-		pieceView.texture = WHITEPIECE
-	elif ownerID == 1:
-		pieceView.texture = BLACKPIECE
-	else:
-		pieceView.texture = null
+	pieceView.ownerID = ownerID
 
 func setHighlight(newColor: Color):
 	highlight.color = newColor

@@ -16,7 +16,10 @@ func _ready():
 func updateTexture():
 	if ownerID == 0:
 		texture = WHITEPIECE
+		flip_h = false
 	elif ownerID == 1:
 		texture = BLACKPIECE
+		flip_h = true
 	else:
 		texture = null
+		flip_h = false
