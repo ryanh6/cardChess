@@ -15,3 +15,15 @@ func setTotalRounds(roundCount: int):
 func setBoardSize(newSize: int):
 	if [5, 7, 9].has(newSize):
 		boardSize = newSize
+
+# LIST OF SETTING TO IMPLEMENT IN FUTURE
+# - Choose who goes first / second
+#	- choose every round? loser goes first? coin flip?
+#	- coin flip first round?
+# - Move timer or no? (ex: 30 seconds to make move)
+# - Randomize card (instead of draft phase)
+# - Add new cards (Pawn, General, King, Queen)
+#	- How many cards in waiting zone?
+#	- How to pick which card to take? (random, most recent, self pick)
+#	- which cards to include in the game?
+#	- how many total cards in game (5 - 9)
