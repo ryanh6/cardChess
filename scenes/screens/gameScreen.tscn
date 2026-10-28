@@ -65,21 +65,30 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="CenterColumn" type="VBoxContainer" parent="MainMargin/MainRows" unique_id=1607484312]
+[node name="CenterColumn" type="Control" parent="MainMargin/MainRows" unique_id=155067111]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="GameStatus" type="VBoxContainer" parent="MainMargin/MainRows/CenterColumn" unique_id=148172950]
-layout_mode = 2
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 23.0
+mouse_filter = 2
 
 [node name="ScoreLabel" type="Label" parent="MainMargin/MainRows/CenterColumn/GameStatus" unique_id=2035720596]
 unique_name_in_owner = true
 layout_mode = 2
 
 [node name="BoardCenter" type="CenterContainer" parent="MainMargin/MainRows/CenterColumn" unique_id=1007131083]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
+mouse_filter = 2
 
 [node name="GameBoard" parent="MainMargin/MainRows/CenterColumn/BoardCenter" unique_id=1255382976 instance=ExtResource("2_wdglq")]
 unique_name_in_owner = true
@@ -87,17 +96,24 @@ custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
 
 [node name="WaitingCardCenter" type="CenterContainer" parent="MainMargin/MainRows/CenterColumn" unique_id=393443092]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -126.0
+grow_horizontal = 2
+grow_vertical = 0
 
 [node name="WaitingCard" parent="MainMargin/MainRows/CenterColumn/WaitingCardCenter" unique_id=2009131815 instance=ExtResource("3_jys3q")]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(90, 126)
+custom_minimum_size = Vector2(70, 98)
 layout_mode = 2
 
 [node name="NextRoundButton" type="Button" parent="MainMargin/MainRows/CenterColumn" unique_id=2081469918]
 unique_name_in_owner = true
 visible = false
-layout_mode = 2
+layout_mode = 0
 size_flags_horizontal = 4
 
 [node name="Player2Column" type="VBoxContainer" parent="MainMargin/MainRows" unique_id=1999323621]

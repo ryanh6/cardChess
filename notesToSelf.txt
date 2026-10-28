@@ -11,7 +11,7 @@ Basic
 - make pause icon
 - improve on settings
 - make proper score UI at the top
-- fix center column margins (i want score on top line, board near center, waiting card shifted up more)
+- fix center column margins (i want score on top line)
 - remove waiting card showing during draft phase
 
 - decorate pause screen
@@ -20,7 +20,8 @@ Basic
 - decorate draft ui
 
 Complicated
+- add move / state tracking (can spectate and reverse)
 - add multiplayer
 - add resizable screens
-- add mobile version
+- add mobile version (different layouts)
 - port the game
