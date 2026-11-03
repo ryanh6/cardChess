@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cvblemk8pxgoy"]
 
 [ext_resource type="Script" uid="uid://dhua3tupoe3cj" path="res://scripts/interface/gameBoardInterface.gd" id="1_l61cb"]
-[ext_resource type="Texture2D" uid="uid://dil5umy5suomn" path="res://assets/newGameBoard.png" id="2_j2gl2"]
+[ext_resource type="Texture2D" uid="uid://j0sjhdj5qpw0" path="res://assets/newGameBoard.png" id="2_j2gl2"]
 
 [node name="GameBoard" type="Control" unique_id=1255382976]
 layout_mode = 3

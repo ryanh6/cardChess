@@ -90,6 +90,7 @@ func refresh(gameBoard: Board, selectedCell: Vector2i, legalMovesList: Array[Vec
 			cell.setHighlight(Color(0, 1, 1, 0.5))
 		else:
 			cell.setHighlight(Color.TRANSPARENT)
+			#cell.setHighlight(Color(1, 0, 0, 0.5))
 
 func onCellSelected(position: Vector2i):
 	cellSelected.emit(position)
