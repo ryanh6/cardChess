@@ -1,4 +1,4 @@
-extends Sprite2D
+extends RefCounted
 class_name Piece
 
 var ownerID: int;
